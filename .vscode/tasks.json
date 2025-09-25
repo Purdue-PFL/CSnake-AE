@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "mvn verify",
+            "type": "shell",
+            "command": "mvn -B clean verify",
+            "group": "build",
+            "options": 
+            {
+                "env": {"JAVA_HOME": "/usr/lib/jvm/java-1.11.0-openjdk-amd64"}
+            }
+        },
+	]
+}

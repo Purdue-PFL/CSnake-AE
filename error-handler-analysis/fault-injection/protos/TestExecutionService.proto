@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+
+service TestExecution
+{
+    rpc getTask(ClientID) returns (Task) {}
+    rpc taskFinish(TaskResult) returns (google.protobuf.UInt64Value) {}
+}
+
+message ClientID
+{
+    string ipAddr = 1;
+    string uuid = 2;
+}
+
+message Task 
+{
+    string expKey = 1;
+    string btmStr = 2;
+    string unittestFunc = 3;
+    int32 injectionTimeMs = 4;
+    int32 unittestTimeoutMs = 5;
+}
+
+message TaskResult 
+{
+    ClientID clientID = 1;
+    string expKey = 2;
+    bytes testOutput = 3;
+}

@@ -1,0 +1,182 @@
+<!--
+ - Copyright 2021 Red Hat, Inc.
+ -
+ - This file is part of Jigawatts.
+ -
+ - Jigawatts is free software; you can redistribute it and/or modify
+ - it under the terms of the GNU General Public License as published
+ - by the Free Software Foundation; either version 2, or (at your
+ - option) any later version.
+ -
+ - Jigawatts is distributed in the hope that it will be useful, but
+ - WITHOUT ANY WARRANTY; without even the implied warranty of
+ - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ - General Public License for more details.
+ -
+ - You should have received a copy of the GNU General Public License
+ - along with Jigawatts; see the file COPYING.  If not see
+ - <http://www.gnu.org/licenses/>.
+ -
+ - Linking this library statically or dynamically with other modules
+ - is making a combined work based on this library.  Thus, the terms
+ - and conditions of the GNU General Public License cover the whole
+ - combination.
+ -
+ - As a special exception, the copyright holders of this library give you
+ - permission to link this library with independent modules to produce an
+ - executable, regardless of the license terms of these independent
+ - modules, and to copy and distribute the resulting executable under
+ - terms of your choice, provided that you also meet, for each linked
+ - independent module, the terms and conditions of the license of that
+ - module.  An independent module is a module which is not derived from
+ - or based on this library.  If you modify this library, you may extend
+ - this exception to your version of the library, but you are not
+ - obligated to do so.  If you do not wish to do so, delete this
+ - exception statement from your version.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.redhat</groupId>
+    <artifactId>jigawatts</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Jigawatts</name>
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <java.includes>${env.JAVA_HOME}</java.includes>      
+    </properties>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <compilerVersion>8</compilerVersion>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>header-generation</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                       <configuration>
+                            <compilerArgs>
+                                <arg>-h</arg>
+                                <arg>${project.build.directory}/native/javah</arg>
+                            </compilerArgs>
+                            <includes>
+                                 <include>com/redhat/jigawatts/Jigawatts.java</include>
+                            </includes>
+                      </configuration>
+                   </execution>
+               </executions>
+           </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <!-- TODO this only needed when printf is used in native code; can be remove once its gone -->
+                    <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory"/>
+                    <environmentVariables>
+                        <LD_PRELOAD>/usr/lib/x86_64-linux-gnu/libcriu.so</LD_PRELOAD>
+                        <!-- <LD_LIBRARY_PATH>/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu</LD_LIBRARY_PATH> -->
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>compile-cpp</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>process-classes</phase>
+                        <configuration>
+                            <executable>gcc</executable>
+                            <arguments>
+                                <argument>-v</argument>
+                                <argument>-shared</argument>
+                                <argument>-fPIC</argument>
+                                <argument>-I${java.includes}/include</argument>
+                                <argument>-I${java.includes}/include/linux</argument>
+                                <argument>-I/usr/lib64/</argument>
+                                <argument>-I/usr/include/criu</argument>
+                                <argument>-I${project.build.directory}/native/javah</argument>
+                                <argument>-L/usr/lib/x86_64-linux-gnu</argument>
+                                <argument>-L/lib/x86_64-linux-gnu</argument>
+                                <argument>-lcriu</argument>
+                                <argument>-o${project.build.outputDirectory}/libJigawatts.so</argument>
+                                <argument>${project.basedir}/src/main/cpp/com_redhat_jigawatts_Jigawatts.cpp</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <id>jigawatts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>jigawatts</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+	    <plugin>
+	      <artifactId>maven-clean-plugin</artifactId>
+	      <version>3.1.0</version>
+	      <configuration>
+		<filesets>
+		  <fileset>
+		    <directory>src/test/resources</directory>
+		    <includes>
+		      <include>jigawatts/*</include>
+		      <include>1*</include>
+		    </includes>
+		    <followSymlinks>false</followSymlinks>
+		  </fileset>
+		</filesets>
+	      </configuration>
+	    </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+</project>

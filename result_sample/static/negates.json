@@ -1,0 +1,32 @@
+{
+  "39e06944ce707586496245709e5d1e6e": {
+    "Type": "NEGATE",
+    "Class": "org.apache.hadoop.hdfs.DataStreamer",
+    "Method": "processDatanodeOrExternalError",
+    "LineNumber": 1374,
+    "LastLineNo": 1441,
+    "ShouldRemove?": false,
+    "RemoveReason": "",
+    "ExecPointID": "39e06944ce707586496245709e5d1e6e"
+  },
+  "f3da2e6d0bcfea6d7d657cbeae2dde0f": {
+    "Type": "NEGATE",
+    "Class": "org.apache.hadoop.hdfs.DataStreamer",
+    "Method": "setupPipelineInternal",
+    "LineNumber": 1635,
+    "LastLineNo": 1677,
+    "ShouldRemove?": false,
+    "RemoveReason": "",
+    "ExecPointID": "f3da2e6d0bcfea6d7d657cbeae2dde0f"
+  },
+  "d1dc8676b0330c5edbc204b19201ab5a": {
+    "Type": "NEGATE",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.LocalReplica",
+    "Method": "renameFile",
+    "LineNumber": 332,
+    "LastLineNo": 336,
+    "ShouldRemove?": true,
+    "RemoveReason": "Rule 2: Abstract Class",
+    "ExecPointID": "d1dc8676b0330c5edbc204b19201ab5a"
+  }
+}

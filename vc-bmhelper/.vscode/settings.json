@@ -1,0 +1,20 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.settings.url": ".vscode/eclipse-formatter.xml",
+    "json.maxItemsComputed": 1000000,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx32G -Xms2G",
+    "editor.foldingMaximumRegions": 65000,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.settings": false
+    },
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style={ column_limit: 120, split_all_top_level_comma_separated_values: true, each_dict_entry_on_separate_line: true }"
+    ]
+}

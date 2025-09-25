@@ -1,0 +1,40 @@
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/eclipse-formatter.xml
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+result/*
+!result/.gitkeep
+!result/small-plan.json
+!result/testplans
+!result/inj_temp
+!result/loopfinder
+!result/loop_interference
+!result/loops_interesting_if-throw-hdfs292.json
+result/inj_temp/*
+!result/inj_temp/.gitkeep
+result/loopfinder/*
+!result/loopfinder/.gitkeep
+result/loop_interference/*
+!result/loop_interference/.gitkeep
+
+# Exclude Intellij files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+target/
+*.log
+
+criu/

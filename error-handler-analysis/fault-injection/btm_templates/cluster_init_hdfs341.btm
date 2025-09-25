@@ -1,0 +1,39 @@
+RULE MiniDFSClusterSetup
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD <init>
+AT EXIT
+IF true
+DO startInjection();
+ENDRULE
+
+RULE MiniDFSClusterShutdown
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD shutdown
+AT EXIT
+IF true
+DO stopInjection();
+ENDRULE
+
+RULE ClusterRestart-Stop1
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD restartNameNodes
+AT ENTRY
+IF true
+DO stopInjection();
+ENDRULE
+
+RULE ClusterRestart-Stop2
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD restartNameNode
+AT ENTRY
+IF true
+DO stopInjection();
+ENDRULE
+
+RULE ClusterRestart-Active
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD waitActive
+AT EXIT
+IF true
+DO startInjection();
+ENDRULE

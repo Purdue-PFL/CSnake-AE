@@ -1,0 +1,9 @@
+grpcio==1.62.0
+grpcio-tools==1.62.0
+importlib-metadata==7.0.1
+platformdirs==4.2.0
+protobuf==4.25.3
+tomli==2.0.1
+yapf==0.40.2
+zstandard==0.22.0
+mmh3==4.1.0

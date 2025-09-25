@@ -1,0 +1,22 @@
+HELPER pfl.bm.VCLoopInterferenceHelper 
+COMPILE
+
+RULE DumpResult1
+CLASS org.apache.hadoop.hdfs.TestFileAppend3
+METHOD testTC1
+AT EXIT
+IF true
+DO System.out.println("### Byteman: Dump");
+   dumpResult();
+ENDRULE
+
+RULE DumpResult2
+CLASS org.apache.hadoop.hdfs.TestFileAppend3
+METHOD testTC1
+AT EXCEPTION EXIT 
+IF true
+DO System.out.println("### Byteman: Dump");
+   dumpResult();
+ENDRULE
+
+

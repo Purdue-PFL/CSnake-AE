@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "pfl.test_execute.App",
+            "projectName": "vc-test-executor"
+        }
+    ]
+}

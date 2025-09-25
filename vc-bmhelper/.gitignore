@@ -1,0 +1,30 @@
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/eclipse-formatter.xml
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+result/*
+!result/.gitkeep
+
+# Exclude Intellij files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+target/
+*.log
+dependency-reduced-pom.xml

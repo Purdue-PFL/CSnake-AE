@@ -1,0 +1,9 @@
+[
+    "org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager#testAsyncIBR",
+    "org.apache.hadoop.hdfs.TestLocatedBlocksRefresher#testRefreshOnDeadNodes",
+    "org.apache.hadoop.hdfs.TestFileAppend2#testComplexAppend2",
+    "org.apache.hadoop.hdfs.TestFileAppend2#testComplexAppend",
+    "org.apache.hadoop.hdfs.TestDatanodeDeath#testComplex",
+    "org.apache.hadoop.hdfs.TestMaintenanceState#testTransitionFromDecommissioned",
+    "org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement#testBlockReplacement"
+]

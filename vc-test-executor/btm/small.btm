@@ -1,0 +1,12 @@
+HELPER pfl.bm.VCLoopInterferenceHelper 
+COMPILE
+
+
+RULE MiniDFSClusterSetup
+CLASS org.apache.hadoop.hdfs.MiniDFSCluster
+METHOD <init>
+AT EXIT
+IF true
+DO startInjection();
+ENDRULE
+

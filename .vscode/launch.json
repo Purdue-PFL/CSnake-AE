@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GetBranchPoints",
+            "request": "launch",
+            "mainClass": "pfl.GetBranchPoints",
+            "projectName": "error-handler-analysis"
+        },
+        {
+            "type": "java",
+            "name": "GetAllLoops",
+            "request": "launch",
+            "mainClass": "pfl.GetAllLoops",
+            "projectName": "error-handler-analysis"
+        },
+        {
+            "type": "java",
+            "name": "HDFS 292 - IfThrow",
+            "request": "launch",
+            "mainClass": "pfl.Main",
+            "args": "-cp /data/qian151/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-2.9.2.jar:/data/qian151/hadoop-2.9.2/share/hadoop/common/hadoop-common-2.9.2.jar:/data/qian151/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-client-2.9.2.jar -tcp /data/qian151/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-2.9.2-tests.jar",
+            "vmArgs": "-Xms4g -Xmx64g",
+            "preLaunchTask": "mvn verify"
+        },
+        {
+            "type": "java",
+            "name": "HDFS 292 - ThrowPoint",
+            "request": "launch",
+            "mainClass": "pfl.ThrowPointMain",
+            "args": "-cp /home/qian151/research/vc-detect/target_bins/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-2.9.2.jar:/home/qian151/research/vc-detect/target_bins/hadoop-2.9.2/share/hadoop/common/hadoop-common-2.9.2.jar:/home/qian151/research/vc-detect/target_bins/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-client-2.9.2.jar -tcp /home/qian151/research/vc-detect/target_bins/hadoop-2.9.2/share/hadoop/hdfs/hadoop-hdfs-2.9.2-tests.jar",
+            "vmArgs": "-Xms4g -Xmx64g",
+            "preLaunchTask": "mvn verify"
+        },
+        {
+            "type": "java",
+            "name": "ThrowPointTest",
+            "request": "launch",
+            "mainClass": "pfl.ThrowPointMain",
+            "args": "-cp /home/qian151/research/vc-detect/error-handler-analysis/analyzer_test/ThrowPointTest.jar",
+            "vmArgs": "-Xms4g -Xmx64g",
+            "preLaunchTask": "mvn verify"
+        }
+    ]
+}

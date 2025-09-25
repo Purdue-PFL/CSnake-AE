@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "IterEventBinaryDecodeVerifier",
+            "request": "launch",
+            "mainClass": "pfl.bm.IterEventBinaryDecodeVerifier",
+            "projectName": "vc-bmhelper",
+            "args": "--bin /data/qian151/vc-detect-workspace/loop-interference-result/injection/be1bcfe3a2705cf16f0dac0887d93b1e/IterEvents.bin --json /data/qian151/vc-detect-workspace/loop-interference-result/injection/be1bcfe3a2705cf16f0dac0887d93b1e/IterEvents.json"
+        }
+    ]
+}

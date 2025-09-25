@@ -1,0 +1,31 @@
+
+HELPER pfl.bm.VCLoopInterferenceHelper
+COMPILE
+
+RULE DumpResult1
+CLASS org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+METHOD testExceedsCapacity
+AT EXIT 
+IF true 
+DO dumpResult();
+ENDRULE 
+
+RULE DumpResult2
+CLASS org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+METHOD testExceedsCapacity
+AT EXCEPTION EXIT 
+IF true 
+DO dumpResult();
+ENDRULE 
+
+
+RULE e59abe6a037fa8ceb1ae22cad782f5cc
+CLASS org.apache.hadoop.hdfs.server.namenode.CacheManager
+METHOD validatePoolName
+AT LINE 308
+IF stillInject()
+DO recordInjectionEvent("e59abe6a037fa8ceb1ae22cad782f5cc");
+    createObject("java.lang.String", new int[]{-1}, 0);
+    throw new org.apache.hadoop.fs.InvalidRequestException(java.lang.String.class.cast(getObject(0)));
+ENDRULE 
+

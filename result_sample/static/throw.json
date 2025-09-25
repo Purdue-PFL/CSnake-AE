@@ -1,0 +1,393 @@
+{
+  "a403f1bb9e82d7fcec26fd7d2ad28106": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.DFSPacket",
+    "Method": "writeTo",
+    "LineNumber": 193,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.DFSPacket",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.DFSPacket.writeTo",
+    "ThrowPointLineNumber": 193,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "a403f1bb9e82d7fcec26fd7d2ad28106"
+  },
+  "9386249ddd55ab7554cbc47c48da8a6e": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.DataStreamer",
+    "Method": "sendPacket",
+    "LineNumber": 897,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.DataStreamer",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.DataStreamer.sendPacket",
+    "ThrowPointLineNumber": 897,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "9386249ddd55ab7554cbc47c48da8a6e"
+  },
+  "db6b65df09fabd28b2c01ccede3da488": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.DataStreamer$StreamerStreams",
+    "Method": "sendTransferBlock",
+    "LineNumber": 186,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.DataStreamer$StreamerStreams",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.DataStreamer$StreamerStreams.sendTransferBlock",
+    "ThrowPointLineNumber": 186,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "db6b65df09fabd28b2c01ccede3da488"
+  },
+  "d48df93b2a993dcf5cab34cb8369d070": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.protocol.datatransfer.Op",
+    "Method": "write",
+    "LineNumber": 65,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.protocol.datatransfer.Op",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.protocol.datatransfer.Op.write",
+    "ThrowPointLineNumber": 65,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "d48df93b2a993dcf5cab34cb8369d070"
+  },
+  "9f6924d69c36ed8417ffd1f6a2988fc2": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender",
+    "Method": "op",
+    "LineNumber": 74,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender.op",
+    "ThrowPointLineNumber": 74,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "9f6924d69c36ed8417ffd1f6a2988fc2"
+  },
+  "7ed352a7ab6f1dfe22a297d29fd7f990": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender",
+    "Method": "send",
+    "LineNumber": 84,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.protocol.datatransfer.Sender.send",
+    "ThrowPointLineNumber": 84,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "7ed352a7ab6f1dfe22a297d29fd7f990"
+  },
+  "da2da97d34c38acb1b526b134a7ec248": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.protocolPB.PBHelperClient",
+    "Method": "vintPrefixed",
+    "LineNumber": 527,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.protocolPB.PBHelperClient",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed",
+    "ThrowPointLineNumber": 527,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "da2da97d34c38acb1b526b134a7ec248"
+  },
+  "853f23676bc8c692b291d8dd4b695429": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "Method": "close",
+    "LineNumber": 346,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver.close",
+    "ThrowPointLineNumber": 346,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "853f23676bc8c692b291d8dd4b695429"
+  },
+  "8eb71a62c4738dd785e164f8c22cd6b3": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "Method": "close",
+    "LineNumber": 355,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver.close",
+    "ThrowPointLineNumber": 355,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "8eb71a62c4738dd785e164f8c22cd6b3"
+  },
+  "d0fb6fde9db4e0b66743c5a688d42f2c": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "Method": "close",
+    "LineNumber": 392,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver.close",
+    "ThrowPointLineNumber": 394,
+    "ThrowPointType": "IF_THROW",
+    "ExecPointID": "d0fb6fde9db4e0b66743c5a688d42f2c"
+  },
+  "6aeaa1a2db7d74c2481cf9a3d78337cf": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver$PacketResponder",
+    "Method": "sendAckUpstreamUnprotected",
+    "LineNumber": 1701,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver$PacketResponder",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.BlockReceiver$PacketResponder.sendAckUpstreamUnprotected",
+    "ThrowPointLineNumber": 1702,
+    "ThrowPointType": "IF_THROW",
+    "ExecPointID": "6aeaa1a2db7d74c2481cf9a3d78337cf"
+  },
+  "60f48febb4675648bb8866beafdaa8b0": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataNode",
+    "Method": "newSocket",
+    "LineNumber": 2350,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataNode",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataNode.newSocket",
+    "ThrowPointLineNumber": 2350,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "60f48febb4675648bb8866beafdaa8b0"
+  },
+  "995a250804ef892ceb6d751ee09af937": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "Method": "copyBlock",
+    "LineNumber": 1156,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataXceiver.copyBlock",
+    "ThrowPointLineNumber": 1156,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "995a250804ef892ceb6d751ee09af937"
+  },
+  "23a20b19d0ff82ce2a82ec8e106d2d58": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "Method": "replaceBlock",
+    "LineNumber": 1216,
+    "ThrowableConstruction": [
+      {
+        "type": "java.net.SocketException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataXceiver.replaceBlock",
+    "ThrowPointLineNumber": 1216,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "23a20b19d0ff82ce2a82ec8e106d2d58"
+  },
+  "24ce72e40d45f64decc61a99aa90880a": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "Method": "replaceBlock",
+    "LineNumber": 1288,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataXceiver.replaceBlock",
+    "ThrowPointLineNumber": 1288,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "24ce72e40d45f64decc61a99aa90880a"
+  },
+  "775e82d0f566bc2ef8a14b3227fb75ed": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "Method": "writeBlock",
+    "LineNumber": 858,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataXceiver.writeBlock",
+    "ThrowPointLineNumber": 858,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "775e82d0f566bc2ef8a14b3227fb75ed"
+  },
+  "c68e0318c660cf09e1faccaeea34ae0b": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "Method": "writeBlock",
+    "LineNumber": 883,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.DataXceiver",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.DataXceiver.writeBlock",
+    "ThrowPointLineNumber": 883,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "c68e0318c660cf09e1faccaeea34ae0b"
+  },
+  "5136f58d67f9321ab988269e145d34d0": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider",
+    "Method": "flush",
+    "LineNumber": 133,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider.flush",
+    "ThrowPointLineNumber": 133,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "5136f58d67f9321ab988269e145d34d0"
+  },
+  "9462f90713b45a5669e32665c0088248": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider",
+    "Method": "mkdirsWithExistsCheck",
+    "LineNumber": 696,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider.mkdirsWithExistsCheck",
+    "ThrowPointLineNumber": 697,
+    "ThrowPointType": "IF_THROW",
+    "ExecPointID": "9462f90713b45a5669e32665c0088248"
+  },
+  "8e5b5e0974be6bde89bc12beb954d525": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider$WrappedFileOutputStream",
+    "Method": "write",
+    "LineNumber": 960,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider$WrappedFileOutputStream",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.FileIoProvider$WrappedFileOutputStream.write",
+    "ThrowPointLineNumber": 960,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "8e5b5e0974be6bde89bc12beb954d525"
+  },
+  "dae6e38320246754abc2d7c7f2be339d": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.fsdataset.ReplicaInputStreams",
+    "Method": "closeStreams",
+    "LineNumber": 125,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.fsdataset.ReplicaInputStreams",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.fsdataset.ReplicaInputStreams.closeStreams",
+    "ThrowPointLineNumber": 125,
+    "ThrowPointType": "LIB_THROW",
+    "ExecPointID": "dae6e38320246754abc2d7c7f2be339d"
+  },
+  "a800ae7d4d33c423c874584d9834da94": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl",
+    "Method": "getReplicaInfo",
+    "LineNumber": 896,
+    "ThrowableConstruction": [
+      {
+        "type": "org.apache.hadoop.hdfs.server.datanode.ReplicaNotFoundException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl.getReplicaInfo",
+    "ThrowPointLineNumber": 897,
+    "ThrowPointType": "IF_THROW",
+    "ExecPointID": "a800ae7d4d33c423c874584d9834da94"
+  },
+  "27c7b970ea6ed26d38f0acee84215060": {
+    "Type": "THROW_EXCEPTION",
+    "Class": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeImpl",
+    "Method": "getBlockPoolSlice",
+    "LineNumber": 563,
+    "ThrowableConstruction": [
+      {
+        "type": "java.io.IOException",
+        "paramList": []
+      }
+    ],
+    "ThrowPointClass": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeImpl",
+    "ThrowPointMethod": "org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeImpl.getBlockPoolSlice",
+    "ThrowPointLineNumber": 564,
+    "ThrowPointType": "IF_THROW",
+    "ExecPointID": "27c7b970ea6ed26d38f0acee84215060"
+  }
+}
