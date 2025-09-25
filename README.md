@@ -1,5 +1,7 @@
 # Artifact for EuroSys'26 paper "CSnake: Detecting Self-Sustaining Cascading Failure via Causal Stitching of Fault Propagations"
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17049892.svg)](https://doi.org/10.5281/zenodo.17049892)
+
 # Prerequisites
 
 All scripts are tested under Ubuntu 22.04. 
